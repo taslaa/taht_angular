@@ -5,7 +5,7 @@
             <label for="serviceId">Select Service</label>
             <select id="serviceId" name="serviceId" [(ngModel)]="reservationData.serviceId" class="form-control"
                 required>
-                <option *ngFor="let service of services" [value]="service.serviceId">{{ service.name }} - {{
+                <option *ngFor="let service of services" [value]="service.id">{{ service.name }} - {{
                     service.price | currency: 'USD' }}</option>
             </select>
         </div>

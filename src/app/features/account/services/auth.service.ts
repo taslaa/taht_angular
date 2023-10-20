@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import jwt_decode from 'jwt-decode';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable()
 export class AuthService {
   private baseUrl = 'https://localhost:7115/api';
   private tokenKey = 'token';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   signIn(email: string, password: string): Observable<any> {
     return this.http.post(`${this.baseUrl}/Access/SignIn`, { email, password });
@@ -25,8 +26,11 @@ export class AuthService {
 
   getCurrentUser(): any {
     const token = localStorage.getItem(this.tokenKey);
+    const helper = new JwtHelperService();
     if (token) {
-      return jwt_decode(token);
+      const decodedToken = helper.decodeToken(token);
+      console.log(decodedToken);
+      return decodedToken;
     }
     return null;
   }

@@ -45,9 +45,7 @@ export class ReservationComponent implements OnInit {
   }
 
   createReservation() {
-    var userId = this.authService.getCurrentUser()?.userId;
-    console.log(userId);
-    this.reservationData.UserId = userId;
+    this.reservationData.userId = this.authService.getCurrentUser()?.Id;
 
     this.reservationService.post('/Reservations', this.reservationData)
       .subscribe(response => {
