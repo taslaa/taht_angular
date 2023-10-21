@@ -1,0 +1,78 @@
+.signup-container {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+
+.signup-container h2 {
+    color: #035e5d;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: "Arial", sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    color: #035e5d;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    display: block; /* Make the labels block-level */
+}
+
+.form-control,
+button {
+    width: 100%;
+    max-width: 480px; /* Adjusted the maximum width to fit within the container */
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    padding: 12px;
+    color: #555;
+    font-family: "Arial", sans-serif;
+    display: block; /* Make the inputs and buttons block-level */
+    margin-top: 10px;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.form-control:focus {
+    border-color: #035e5d;
+    outline: none;
+}
+
+button {
+    background-color: #035e5d;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0a7a78;
+}
+
+.sign-in-navigation {
+    text-decoration: none;
+    color: #035e5d;
+}
+
+.back-to-landing {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: "Arial", sans-serif;
+}
+
+.landing-navigation {
+    text-decoration: none;
+}

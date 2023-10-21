@@ -1,0 +1,10 @@
+<div class="currency-switcher">
+    <div class="currency-button" (click)="toggleCurrencyDropdown()">
+      <img [src]="selectedCurrency === 'BAM' ? '/assets/ba.svg' : '/assets/us.svg'" alt="{{ selectedCurrency }}" />
+    </div>
+    <ul class="currency-dropdown" [ngClass]="{ 'open': isCurrencyDropdownOpen }">
+      <li (click)="changeCurrency('BAM')">BAM</li>
+      <li (click)="changeCurrency('USD')">USD</li>
+    </ul>
+  </div>
+  

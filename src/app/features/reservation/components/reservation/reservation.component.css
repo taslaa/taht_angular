@@ -1,0 +1,57 @@
+.reservation-container {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center; /* Center everything horizontally */
+    font-family: "Arial", sans-serif;
+    max-width: 500px; /* Limit the container's maximum width to 500px */
+    margin: 0 auto; /* Center the container horizontally on the page */
+  }
+  
+  .reservation-container h2 {
+    color: #035e5d;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    color: #035e5d;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .form-control,
+  button,
+  select.form-control,
+  input[type="date"].form-control {
+    width: 100%; /* Make all elements 100% width */
+    max-width: 500px; /* Limit the maximum width to 500px */
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    padding: 12px; /* Adjust padding for appropriate size */
+    color: #555; /* Text color */
+    font-family: "Arial", sans-serif;
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  .form-control:focus {
+    border-color: #035e5d;
+    outline: none;
+  }
+  
+  button {
+    background-color: #035e5d;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+  }
+  
+  button:hover {
+    background-color: #0a7a78;
+  }
+  

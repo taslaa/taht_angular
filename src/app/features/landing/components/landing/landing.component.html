@@ -1,0 +1,22 @@
+<div class="landing-container">
+    <div class="left-side">
+        <div class="logo">
+            <img src="assets/novitahtlogo.png" alt="Your Logo">
+        </div>
+        <div class="text-container">
+            <div class="fancy-text">
+                {{ displayedText }}
+            </div>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="get-started">
+            <h2>Get Started</h2>
+            <p>Join our community today and explore the possibilities.</p>
+        </div>
+        <div class="buttons">
+            <button class="sign-in-button" (click)="navigateToSignIn()">Sign In</button>
+            <button class="sign-up-button" (click)="navigateToSignUp()">Sign Up</button>
+        </div>
+    </div>
+</div>

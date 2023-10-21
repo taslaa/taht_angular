@@ -12,6 +12,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/reservation/reservation.module').then((m) => m.ReservationModule),
   },
+  {
+    path: 'landing',
+    loadChildren: () =>
+      import('./features/landing/landing.module').then((m) => m.LandingModule),
+  },
 ];
 
 @NgModule({

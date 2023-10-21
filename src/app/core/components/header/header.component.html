@@ -1,1 +1,23 @@
-<p>header works!</p>
+<header class="header" *ngIf="!isLandingPage && !isAccountPage">
+    <div class="container">
+        <div class="logo">
+            <img src="/assets/novitahtlogo.png" alt="Your Logo" />
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a routerLink="/">HOME</a></li>
+                <li><a routerLink="/reservation">RESERVATION</a></li>
+                <li><a routerLink="/profile">MY PROFILE</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <app-currency-switcher></app-currency-switcher>
+            <div *ngIf="isLoggedIn; else loginLink">
+                <a (click)="logout()"><i class="fa fa-sign-out"></i>LOGOUT</a>
+            </div>
+            <ng-template #loginLink>
+                <a routerLink="/login">Login</a>
+            </ng-template>
+        </div>
+    </div>
+</header>
