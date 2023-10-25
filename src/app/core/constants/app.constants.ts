@@ -1,1 +1,0 @@
-export const EUR_TO_BAM_RATIO = 1.96;

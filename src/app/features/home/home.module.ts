@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { UiModule } from '@ui/ui.module';
-import { MatDialog } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -20,7 +19,6 @@ import { MatDialog } from '@angular/material/dialog';
     FormsModule,
     HttpClientModule,
     UiModule,
-    MatDialog
   ]
 })
 export class HomeModule { }

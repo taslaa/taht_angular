@@ -19,6 +19,7 @@ export class ReservationComponent implements OnInit {
   };
   services: any[] = [];
   appointmentTimes: string[] = [];
+  minReservationDate: Date = new Date();
 
   constructor(
     private reservationService: ReservationsService,
@@ -29,8 +30,8 @@ export class ReservationComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadServices();
-
     this.initializeAppointmentTimes();
+    this.minReservationDate = new Date();
   }
 
   loadServices() {
@@ -48,11 +49,10 @@ export class ReservationComponent implements OnInit {
 
   createReservation() {
     this.reservationData.userId = this.authService.getCurrentUser()?.Id;
-  
+
     this.reservationService.post('/Reservations', this.reservationData)
       .subscribe(response => {
-          this.router.navigate(['/reservation/confirmation']);
+        this.router.navigate(['/reservation/confirmation']);
       });
   }
-  
 }

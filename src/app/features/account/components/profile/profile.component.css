@@ -4,6 +4,7 @@
   align-items: center;
   margin: 20px;
   font-family: "Arial", sans-serif;
+  min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
 }
 
 .reservations-container {
@@ -12,12 +13,13 @@
   padding: 20px;
   text-align: center;
   border-radius: 10px;
-  width: 80%;
+  width: 100%; /* Make it full-width */
   max-width: 600px;
   margin: 0 auto;
   margin-top: 20px;
   color: #035e5d;
 }
+
 
 .reservations-container h2 {
   font-size: 24px;

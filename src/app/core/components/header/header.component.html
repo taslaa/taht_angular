@@ -11,7 +11,6 @@
             </ul>
         </nav>
         <div class="header-right">
-            <app-language-switcher></app-language-switcher>
             <div *ngIf="isLoggedIn; else loginLink">
                 <button (click)="logout()"><i class="fa fa-sign-out"></i>LOGOUT</button>
             </div>

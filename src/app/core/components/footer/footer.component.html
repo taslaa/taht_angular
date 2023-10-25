@@ -1,1 +1,12 @@
-<p>footer works!</p>
+<footer class="footer" *ngIf="shouldShowFooter() || routeUrl === '/account/profile'">
+    <div class="container">
+        <p>&copy; 2023 Taht. All rights reserved.</p>
+        <nav class="footer-navigation">
+            <ul>
+                <li><button (click)="navigateTo('/home/home')">HOME</button></li>
+                <li><button (click)="navigateTo('/reservation/reservation')">RESERVATION</button></li>
+                <li><button (click)="navigateTo('/account/profile')">MY PROFILE</button></li>
+            </ul>
+        </nav>
+    </div>
+</footer>

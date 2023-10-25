@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
-import { MapComponent } from '@ui/map/map/map.component';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +20,7 @@ export class HomeComponent implements OnInit {
     "A city view that leaves a lasting impression."
   ];
 
-  constructor(private router: Router, private dialog: MatDialog) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     let index = 0;
@@ -35,11 +33,5 @@ export class HomeComponent implements OnInit {
 
   navigateToReservation() {
     this.router.navigate(['/reservation/reservation']);
-  }
-
-  showLocation() {
-    this.dialog.open(MapComponent, {
-      width: '80%', 
-    });
   }
 }
