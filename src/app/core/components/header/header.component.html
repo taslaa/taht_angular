@@ -1,22 +1,22 @@
-<header class="header" *ngIf="!isLandingPage && !isAccountPage">
+<header class="header" *ngIf="!isLandingPage && !isAccountPage || routeUrl === '/account/profile'">
     <div class="container">
         <div class="logo">
             <img src="/assets/novitahtlogo.png" alt="Your Logo" />
         </div>
         <nav class="navigation">
             <ul>
-                <li><a routerLink="/">HOME</a></li>
-                <li><a routerLink="/reservation">RESERVATION</a></li>
-                <li><a routerLink="/profile">MY PROFILE</a></li>
+                <li><button (click)="navigateTo('/home/home')" [ngClass]="{ 'active-link': routeUrl === '/home/home' }">HOME</button></li>
+                <li><button (click)="navigateTo('/reservation/reservation')" [ngClass]="{ 'active-link': routeUrl === '/reservation/reservation' }">RESERVATION</button></li>
+                <li><button (click)="navigateTo('/account/profile')" [ngClass]="{ 'active-link': routeUrl === '/account/profile' }">MY PROFILE</button></li>
             </ul>
         </nav>
         <div class="header-right">
-            <app-currency-switcher></app-currency-switcher>
+            <app-language-switcher></app-language-switcher>
             <div *ngIf="isLoggedIn; else loginLink">
-                <a (click)="logout()"><i class="fa fa-sign-out"></i>LOGOUT</a>
+                <button (click)="logout()"><i class="fa fa-sign-out"></i>LOGOUT</button>
             </div>
             <ng-template #loginLink>
-                <a routerLink="/login">Login</a>
+                <button (click)="navigateTo('/login')">Login</button>
             </ng-template>
         </div>
     </div>

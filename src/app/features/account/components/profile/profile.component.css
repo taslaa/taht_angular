@@ -1,0 +1,47 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.reservations-container {
+  font-family: "Arial", sans-serif;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: #035e5d;
+}
+
+.reservations-container h2 {
+  font-size: 24px;
+  color: #035e5d;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.reservations-container ul {
+  list-style: none;
+  padding: 0;
+  max-height: 300px; /* Set a maximum height for scrollability */
+  overflow-y: auto; /* Add a vertical scrollbar when content exceeds the height */
+}
+
+.reservations-container li {
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.info-label {
+  font-weight: bold;
+}

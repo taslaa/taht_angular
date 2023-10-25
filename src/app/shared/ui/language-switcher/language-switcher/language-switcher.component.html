@@ -1,0 +1,10 @@
+<div class="language-switcher">
+    <div class="language-button" (click)="toggleLanguageDropdown()">
+        <img [src]="selectedLanguage === 'bs' ? '/assets/ba.svg' : '/assets/us.svg'"
+            alt="{{ selectedLanguage }}" />
+    </div>
+    <ul class="language-dropdown" [ngClass]="{ 'open': isLanguageDropdownOpen }">
+        <li (click)="changeLanguage('bs')">Bosnian</li>
+        <li (click)="changeLanguage('en')">English</li>
+    </ul>
+</div>

@@ -1,9 +1,9 @@
-.currency-switcher {
+.language-switcher {
     position: relative;
     display: inline-block;
 }
 
-.currency-button {
+.language-button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -16,21 +16,21 @@
     transition: background-color 0.3s;
 }
 
-.currency-button img {
+.language-button img {
     height: 20px;
     width: auto;
 }
 
-.currency-button.active {
+.language-button.active {
     background-color: #fff;
     color: #035e5d;
 }
 
-.currency-button:hover {
+.language-button:hover {
     background-color: #e2e2e2;
 }
 
-.currency-dropdown {
+.language-dropdown {
     position: absolute;
     top: 100%;
     left: 0;
@@ -44,20 +44,20 @@
     border-radius: 15px;
 }
 
-.currency-dropdown.open {
+.language-dropdown.open {
     display: block;
     background-color: #f5f5f5;
     font-family: "Arial", sans-serif;
     font-size: 15px;
 }
 
-.currency-dropdown li {
+.language-dropdown li {
     padding: 10px;
     cursor: pointer;
     text-align: center;
 }
 
-.currency-dropdown li:hover {
+.language-dropdown li:hover {
     background-color: #fff;
     color: #035e5d;
 }

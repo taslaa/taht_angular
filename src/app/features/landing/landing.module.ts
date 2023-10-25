@@ -5,6 +5,7 @@ import { LandingRoutingModule } from './landing-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingComponent } from './components/landing/landing.component';
+import { UiModule } from '@ui/ui.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { LandingComponent } from './components/landing/landing.component';
     LandingRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    UiModule
   ]
 })
 export class LandingModule { }

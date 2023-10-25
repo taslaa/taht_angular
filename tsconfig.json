@@ -22,13 +22,15 @@
     "lib": ["ES2022", "dom"],
     "paths": {
       "@ui": ["src/app/shared/ui"],
-      "@ui/*": ["src/app/shared/ui/*"]
+      "@ui/*": ["src/app/shared/ui/*"],
+      "@ngx-translate/http-loader": ["path-to-ngx-translate-http-loader/index.ts"]
     }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "enableIvy": false
   }
 }

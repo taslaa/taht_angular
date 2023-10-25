@@ -2,6 +2,13 @@
     display: flex;
     background-color: #cddfdf;
     height: 100vh;
+    position: relative;
+}
+
+.app-language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .left-side {
@@ -100,4 +107,12 @@
 
 .buttons button:hover {
     background-color: #0a7a78;
+}
+
+.stari-most {
+    background-size: cover;
+}
+
+.image-container {
+    background-size: cover;
 }

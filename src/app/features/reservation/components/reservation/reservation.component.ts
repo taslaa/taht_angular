@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReservationsService } from '../../services/reservations.service';
 import { AuthService } from '../../../account/services/auth.service';
 import { ServicesService } from '../../services/services.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reservation',
@@ -22,7 +23,8 @@ export class ReservationComponent implements OnInit {
   constructor(
     private reservationService: ReservationsService,
     private authService: AuthService,
-    private servicesService: ServicesService
+    private servicesService: ServicesService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -46,10 +48,11 @@ export class ReservationComponent implements OnInit {
 
   createReservation() {
     this.reservationData.userId = this.authService.getCurrentUser()?.Id;
-
+  
     this.reservationService.post('/Reservations', this.reservationData)
       .subscribe(response => {
-
+          this.router.navigate(['/reservation/confirmation']);
       });
   }
+  
 }

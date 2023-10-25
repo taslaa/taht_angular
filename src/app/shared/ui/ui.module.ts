@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslationComponent } from './translation/translation/translation.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CurrencySwitcherComponent } from './currency-switcher/currency-switcher/currency-switcher.component';
+import { FormsModule } from '@angular/forms';
+import { LanguageSwitcherComponent } from './language-switcher/language-switcher/language-switcher.component';
+import { MapComponent } from './map/map/map.component';
 
 @NgModule({
-  declarations: [TranslationComponent, CurrencySwitcherComponent],
-  exports: [TranslationComponent, CurrencySwitcherComponent],
+  declarations: [LanguageSwitcherComponent, MapComponent],
+  exports: [LanguageSwitcherComponent, MapComponent],
   imports: [CommonModule, FormsModule]
 })
 export class UiModule { }

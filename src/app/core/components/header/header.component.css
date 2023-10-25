@@ -1,3 +1,4 @@
+/* Header Styles */
 .header {
     background-color: transparent;
     color: #035e5d;
@@ -9,17 +10,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .logo img {
     width: 150px;
-}
-
-.navigation {
-    display: flex;
-    gap: 100px;
-    list-style: none;
-    padding: 0;
 }
 
 .navigation ul {
@@ -37,26 +33,30 @@
     font-size: 15px;
 }
 
-.navigation a {
+.navigation button {
+    background: none;
+    border: none;
+    cursor: pointer;
     text-decoration: none;
     color: #035e5d;
+    font-weight: normal;
 }
 
-.navigation a:hover {
-    text-decoration: #024444;
+.navigation button:hover {
     font-weight: bold;
 }
 
-.navigation li:not(:last-child) {
-    margin-right: 15px;
+.navigation button.active-link {
+    font-weight: bold;
+    color: #024444; /* Change color of the active link */
 }
 
-.currency-switcher {
+.language-switcher {
     display: flex;
     align-items: center;
 }
 
-.currency-button {
+.language-button {
     background: none;
     border: none;
     cursor: pointer;
@@ -64,16 +64,16 @@
     margin-right: 10px;
 }
 
-.currency-button img {
+.language-button img {
     width: 16px;
     margin-right: 5px;
 }
 
-.currency-button.active {
+.language-button.active {
     font-weight: bold;
 }
 
-.currency-dropdown {
+.language-dropdown {
     position: absolute;
     top: 100%;
     right: 0;
@@ -85,7 +85,7 @@
     z-index: 1000;
 }
 
-.currency-dropdown.active {
+.language-dropdown.active {
     display: block;
 }
 
@@ -94,20 +94,28 @@
     align-items: center;
 }
 
-.header-right a {
+.header-right button {
     font-family: "Arial", sans-serif;
+    cursor: pointer;
     text-decoration: none;
     color: #035e5d;
-    flex-direction: row;
     font-weight: normal;
+    background-color: transparent;
+    border: none;
 }
 
-.header-right a i {
+.header-right button i {
     color: #035e5d;
-    /* Icon color */
     margin-right: 5px;
 }
 
-.header-right a:hover {
+.header-right button:hover {
     font-weight: bold;
 }
+
+.header-right button.active-link {
+    font-weight: bold;
+    color: #024444; /* Change color of the active link */
+}
+
+/* End Header Styles */

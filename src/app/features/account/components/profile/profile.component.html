@@ -1,0 +1,12 @@
+<div class="profile-container">
+  <div class="reservations-container">
+    <h2>RESERVATIONS HISTORY</h2>
+    <ul>
+      <li *ngFor="let reservation of reservations">
+        <span class="info-label">Date:</span> {{ reservation.reservationDate | date: 'mediumDate' }}<br>
+        <span class="info-label">Appointment:</span> {{ reservation.appointmentTime }}<br>
+        <span class="info-label">Guests:</span> {{ reservation.guestCount }}
+      </li>
+    </ul>
+  </div>
+</div>

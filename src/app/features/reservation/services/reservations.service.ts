@@ -32,4 +32,9 @@ export class ReservationsService extends BaseService {
   override delete(url: string, config?: {}): Observable<any> {
     return super.delete(url, config);
   }
+
+  getReservationsByUser(userId: number): Observable<any> {
+    const url = `/Reservations/GetReservationsByUser?userId=${userId}`;
+    return this.get(url);
+  }
 }

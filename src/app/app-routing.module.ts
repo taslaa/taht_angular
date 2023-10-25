@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './shared/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -16,6 +17,16 @@ const routes: Routes = [
     path: 'landing',
     loadChildren: () =>
       import('./features/landing/landing.module').then((m) => m.LandingModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./features/home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: '**',
+    redirectTo: 'landing',
   },
 ];
 
@@ -23,4 +34,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

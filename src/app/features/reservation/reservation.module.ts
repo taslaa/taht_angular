@@ -8,18 +8,22 @@ import { ReservationsService } from './services/reservations.service';
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { AuthService } from '../account/services/auth.service';
 import { ServicesService } from './services/services.service';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
   declarations: [
-    ReservationComponent
+    ReservationComponent,
+    ConfirmationComponent
   ],
   imports: [
     CommonModule,
     ReservationRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [ReservationsService, AuthService, ServicesService],
 })

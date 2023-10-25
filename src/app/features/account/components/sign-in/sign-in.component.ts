@@ -46,8 +46,9 @@ export class SignInComponent {
 
       this.authService.signIn(email, password).subscribe(
         (response: any) => {
-          const tokenValue = response.token; 
+          const tokenValue = response.token;
           localStorage.setItem('token', tokenValue);
+          this.router.navigate(['/home/home']);
         },
         (error: any) => {
           this.errorMessage = 'Invalid email or password';
